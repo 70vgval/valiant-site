@@ -1,0 +1,27 @@
+:root {
+  /* Chrysler Australia palette */
+  --vitamin-c: #FF6A00;
+  --mustard: #F2C200;
+  --true-blue: #1B4F8A;
+  --poison-ivy: #2D6B3A;
+  --black: #0A0A0A;
+  --cream: #F5F0E6;
+  --white: #FFFFFF;
+
+  /* Typography */
+  --font-heading: 'Anton', 'Impact', sans-serif;
+  --font-display: 'League Gothic', 'Anton', sans-serif;
+  --font-body: 'Roboto', 'Inter', sans-serif;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 6rem;
+
+  /* Layout */
+  --max-width: 1200px;
+  --nav-height: 72px;
+  --separator: 6px;
+}

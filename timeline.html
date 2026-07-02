@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Model Timeline — Valiant Australia</title>
+  <meta name="description" content="Interactive timeline of every Chrysler Valiant model sold in Australia, 1962–1981.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Valiant <span>Australia</span></a>
+      <button class="nav__toggle" aria-label="Toggle menu">Menu</button>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="timeline.html">Timeline</a></li>
+        <li><a href="charger.html">Charger</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="engines.html">Engines</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="production.html">Production</a></li>
+        <li><a href="stories.html">Stories</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <p class="page-header__label">1962 – 1981</p>
+      <h1>Model Timeline</h1>
+      <p class="lead">Every Valiant series sold in Australia — click any model to expand details.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="filter-bar">
+        <button class="filter-btn active" data-gen="all">All Models</button>
+        <button class="filter-btn" data-gen="1">Gen 1 · 1962–63</button>
+        <button class="filter-btn" data-gen="2">Gen 2 · 1963–66</button>
+        <button class="filter-btn" data-gen="3">Gen 3 · 1967–70</button>
+        <button class="filter-btn" data-gen="4">Gen 4 · 1971–73</button>
+        <button class="filter-btn" data-gen="5">Gen 5 · 1975–78</button>
+        <button class="filter-btn" data-gen="6">Gen 6 · 1979–81</button>
+      </div>
+
+      <div class="timeline" id="timeline-container"></div>
+    </div>
+  </section>
+
+  <hr class="separator">
+
+  <section class="section section--cream">
+    <div class="container">
+      <h2>Luxury &amp; Special Models</h2>
+      <hr class="separator separator--short separator--black">
+      <div class="card-grid" style="margin-top: 2rem;">
+        <div class="card card--cream">
+          <h3 class="card__title">Chrysler by Chrysler</h3>
+          <p class="card__body">Long-wheelbase luxury sedans — CH, CJ, and CK series built for the executive market with premium appointments throughout.</p>
+        </div>
+        <div class="card card--cream">
+          <h3 class="card__title">VIP Trim Line</h3>
+          <p class="card__body">Premium trim introduced with the VE, offering enhanced interior luxury and distinctive exterior styling cues.</p>
+        </div>
+        <div class="card card--cream">
+          <h3 class="card__title">Safari / Regal Safari</h3>
+          <p class="card__body">Wagon variants across multiple generations, with the Regal Safari representing the top-spec family hauler.</p>
+        </div>
+        <div class="card card--cream">
+          <h3 class="card__title">Commercial Variants</h3>
+          <p class="card__body">Wayfarer utes, Drifter panel vans, and export models including the Dodge 106 and Rustler.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__brand">Valiant Australia</div>
+      <div class="footer__tagline">Australian Built · 1962–1981</div>
+      <div class="footer__copy">A tribute to Chrysler Australia's motoring legacy.</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/timeline.js"></script>
+</body>
+</html>

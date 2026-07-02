@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Owner Stories — Valiant Australia</title>
+  <meta name="description" content="Community stories from Valiant owners and enthusiasts across Australia.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Valiant <span>Australia</span></a>
+      <button class="nav__toggle" aria-label="Toggle menu">Menu</button>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="timeline.html">Timeline</a></li>
+        <li><a href="charger.html">Charger</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="engines.html">Engines</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="production.html">Production</a></li>
+        <li><a href="stories.html">Stories</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <p class="page-header__label">Community</p>
+      <h1>Owner Stories</h1>
+      <p class="lead">Tales from the people who lived the Valiant legend — owners, restorers, and enthusiasts.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="story-card">
+        <div class="story-card__avatar">MK</div>
+        <div>
+          <div class="story-card__meta">Mark K. · Adelaide, SA · VH Charger 770</div>
+          <p>
+            "Dad bought a VH Charger 770 in Vitamin C when I was twelve. I remember the smell of
+            the vinyl seats and the way the Hemi-6 would pull from nothing. He'd point at billboards
+            saying 'Hey Charger!' and grin. That car's long gone, but I've got a CL 770 now —
+            same orange, same feeling."
+          </p>
+        </div>
+      </div>
+
+      <div class="story-card">
+        <div class="story-card__avatar">SL</div>
+        <div>
+          <div class="story-card__meta">Sandra L. · Geelong, VIC · VE Regal Safari</div>
+          <p>
+            "Our family Valiant was a VE Regal Safari wagon in True Blue. Mum packed us three kids
+            in the back for every school holiday — surfboards on the roof, esky in the boot.
+            That wagon went everywhere. When I finally found another VE Safari years later, I cried
+            in the carpark."
+          </p>
+        </div>
+      </div>
+
+      <div class="story-card">
+        <div class="story-card__avatar">TR</div>
+        <div>
+          <div class="story-card__meta">Tony R. · Brisbane, QLD · AP6 Wayfarer</div>
+          <p>
+            "The AP6 Wayfarer was my first car — paid $400 for it in 1985. Rust in the floors,
+            but the Slant-6 never missed a beat. Hauled building materials, surfboards, and mates
+            for years. Still got it, still runs. They're indestructible."
+          </p>
+        </div>
+      </div>
+
+      <div class="story-card">
+        <div class="story-card__avatar">JP</div>
+        <div>
+          <div class="story-card__meta">James P. · Perth, WA · VG Pacer</div>
+          <p>
+            "Restored a VG Pacer over three years. The Hemi-6 is the heart of that car — when you
+            hear it fire up with those twin exhausts, you understand why people obsess over these
+            engines. It's not just a car, it's Australian engineering at its best."
+          </p>
+        </div>
+      </div>
+
+      <div class="story-card">
+        <div class="story-card__avatar">DW</div>
+        <div>
+          <div class="story-card__meta">David W. · Sydney, NSW · E49 (Restorer)</div>
+          <p>
+            "I've been lucky enough to work on two E49s. One hundred and forty-nine built, and
+            every one is different. The triple Webers, the blueprinted engine, the four-speed —
+            it's all race car dressed as a road car. When you drive one, you understand why they
+            command the prices they do."
+          </p>
+        </div>
+      </div>
+
+      <div class="story-card">
+        <div class="story-card__avatar">AN</div>
+        <div>
+          <div class="story-card__meta">Anne N. · Hobart, TAS · CM Regal</div>
+          <p>
+            "My CM Regal was the last Valiant my family ever bought new. Dad worked at the dealership
+            in Hobart. When Chrysler became Mitsubishi, the name changed but the car was still
+            unmistakably a Valiant. I kept it when Dad passed — it's how I remember him."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="separator separator--mustard">
+
+  <section class="section section--mustard">
+    <div class="container two-col">
+      <div>
+        <h2 style="color: var(--black);">Share Your Story</h2>
+        <p style="color: var(--black); margin-top: 1rem;">
+          Owned a Valiant? Restored one? Grew up in the back seat? We want to hear from you.
+          Submit your story below and it may be featured on this page.
+        </p>
+      </div>
+      <form class="story-form" id="story-form">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="text" name="location" placeholder="City, State" required>
+        <select name="model" required>
+          <option value="">Select your model</option>
+          <option>R Series (RV1)</option>
+          <option>S Series (SV1)</option>
+          <option>AP5</option>
+          <option>AP6</option>
+          <option>VC</option>
+          <option>VE</option>
+          <option>VF</option>
+          <option>VG / Pacer</option>
+          <option>VH Charger</option>
+          <option>VJ Charger</option>
+          <option>VK</option>
+          <option>CL</option>
+          <option>CM</option>
+          <option>Chrysler by Chrysler</option>
+          <option>Other</option>
+        </select>
+        <textarea name="story" placeholder="Tell us your Valiant story..." required></textarea>
+        <button type="submit" class="btn btn--primary">Submit Story</button>
+      </form>
+    </div>
+  </section>
+
+  <div id="story-toast" style="display:none; position:fixed; bottom:2rem; right:2rem; background:var(--vitamin-c); color:var(--black); padding:1rem 2rem; border:3px solid var(--black); font-family:var(--font-heading); text-transform:uppercase; letter-spacing:0.1em; z-index:10001;">
+    Story submitted — thank you!
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__brand">Valiant Australia</div>
+      <div class="footer__tagline">Community · Stories · Memories</div>
+      <div class="footer__copy">Stories are illustrative examples. Submissions are stored locally only.</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('story-form')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const toast = document.getElementById('story-toast');
+      toast.style.display = 'block';
+      e.target.reset();
+      setTimeout(() => { toast.style.display = 'none'; }, 4000);
+    });
+  </script>
+</body>
+</html>
