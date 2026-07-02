@@ -110,6 +110,15 @@ MODELS = [
     },
 ]
 
+HERO = {
+    "brochure": "1971 Valiant VH Charger - Australia",
+    "image": "1971 Valiant VH Charger - Australia page_01.jpg",
+    "crop_box": (0.0, 0.04, 1.0, 1.0),
+    "output": ROOT / "assets" / "hero-charger.png",
+    "source_output": SOURCE_DIR / "hero-charger.jpg",
+    "max_width": 900,
+}
+
 
 def brochure_url(folder: str, image: str, raw_image: bool = False) -> str:
     from urllib.parse import quote
@@ -204,6 +213,46 @@ def stylize_brochure(img: Image.Image) -> Image.Image:
     return img
 
 
+def stylize_hero(img: Image.Image, max_width: int = 900) -> Image.Image:
+    """Preserve brochure aspect ratio for the home page hero."""
+    if img.width > max_width:
+        ratio = max_width / img.width
+        size = (max_width, int(img.height * ratio))
+        img = img.resize(size, Image.Resampling.LANCZOS)
+    else:
+        size = img.size
+
+    img = img.filter(ImageFilter.MedianFilter(size=3))
+    img = ImageOps.autocontrast(img, cutoff=1)
+    img = ImageEnhance.Color(img).enhance(1.25)
+    img = ImageEnhance.Contrast(img).enhance(1.2)
+    img = ImageEnhance.Sharpness(img).enhance(1.05)
+
+    img = img.quantize(colors=14, method=Image.Quantize.MEDIANCUT).convert("RGB")
+    img = img.quantize(palette=build_brand_palette(), dither=Image.Dither.FLOYDSTEINBERG).convert("RGB")
+
+    tint = Image.new("RGB", size, (255, 106, 0))
+    return Image.blend(img, tint, alpha=0.03)
+
+
+def generate_hero() -> None:
+    """Build home page hero from the VH Charger brochure cover."""
+    page_url = brochure_page_url(HERO["brochure"])
+    image_url = brochure_url(HERO["brochure"], HERO["image"])
+
+    print(f"Hero ← {HERO['brochure']}")
+    download(image_url, HERO["source_output"])
+    time.sleep(0.75)
+
+    img = Image.open(HERO["source_output"]).convert("RGB")
+    prepared = prepare_source(img, HERO.get("crop_box"))
+    prepared.save(HERO["source_output"], "JPEG", quality=88, optimize=True)
+
+    styled = stylize_hero(prepared, HERO["max_width"])
+    styled.save(HERO["output"], "PNG", optimize=True)
+    print(f"  saved {HERO['output']} ({styled.size[0]}×{styled.size[1]})")
+
+
 def prepare_source(img: Image.Image, crop_box: tuple[float, float, float, float] | None) -> Image.Image:
     if crop_box:
         img = apply_relative_crop(img, crop_box)
@@ -251,6 +300,7 @@ def main() -> None:
         })
 
     ATTRIBUTIONS_FILE.write_text(json.dumps(attributions, indent=2), encoding="utf-8")
+    generate_hero()
     print(f"\nDone — {len(attributions)} brochure illustrations saved.")
 
 

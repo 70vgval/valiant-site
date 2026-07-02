@@ -32,7 +32,7 @@ archived at [oldcarbrochures.org](https://www.oldcarbrochures.org/Australia/Chry
 python3 scripts/fetch_and_stylize.py
 ```
 
-Brochure scans are saved to `assets/source/`, stylized PNGs to `assets/models/`, and source metadata to `assets/attributions.json`.
+Brochure scans are saved to `assets/source/`, stylized PNGs to `assets/models/`, the home page hero to `assets/hero-charger.png`, and source metadata to `assets/attributions.json`.
 
 ## Running Locally
 

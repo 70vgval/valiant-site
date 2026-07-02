@@ -254,11 +254,15 @@ h3 { font-size: clamp(1.4rem, 3vw, 2rem); }
 
 .hero__car {
   position: absolute;
-  right: -5%;
-  bottom: 5%;
-  width: min(55vw, 700px);
+  right: -2%;
+  bottom: 0;
+  width: min(42vw, 520px);
+  height: auto;
+  max-height: 88vh;
   z-index: 1;
-  opacity: 0.9;
+  opacity: 0.95;
+  border: 3px solid var(--vitamin-c);
+  box-shadow: 8px 8px 0 rgba(255, 106, 0, 0.25);
 }
 
 /* ── Buttons ── */
@@ -1056,9 +1060,10 @@ h3 { font-size: clamp(1.4rem, 3vw, 2rem); }
   }
 
   .hero__car {
-    width: 90vw;
-    right: -20%;
-    opacity: 0.4;
+    width: min(70vw, 420px);
+    right: -8%;
+    opacity: 0.55;
+    max-height: 50vh;
   }
 }
 
