@@ -80,9 +80,9 @@ MODELS = [
     },
     {
         "id": "vj",
-        "brochure": "1973 Valiant VJ Charger - Australia",
-        "image": "1973 Valiant VJ Charger - Australia page_01.jpg",
-        "crop_box": (0.0, 0.0, 1.0, 0.88),
+        "brochure": "1974-Chrysler-VJ-Valiant-Charger-Brochure",
+        "image": "1974_Valiant_VJ_Charger_2+3-01.jpg",
+        "crop_box": (0.02, 0.17, 0.98, 0.98),
     },
     {
         "id": "vk",
@@ -99,8 +99,8 @@ MODELS = [
     {
         "id": "cm",
         "brochure": "1978 Chrysler CM Valiant _ Regal (Aus)",
-        "image": "1978 Chrysler CM Regal _ Valiant (Aus)-02.jpg",
-        "crop_box": (0.0, 0.08, 0.68, 0.9),
+        "image": "1978 Chrysler CM Regal _ Valiant (Aus)-04-05.jpg",
+        "crop_box": (0.0, 0.06, 0.52, 0.90),
     },
     {
         "id": "chrysler-by-chrysler",
