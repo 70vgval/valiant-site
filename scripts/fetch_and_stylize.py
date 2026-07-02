@@ -119,6 +119,15 @@ HERO = {
     "max_width": 900,
 }
 
+CHARGER_HERO = {
+    "brochure": "1971-Chrysler-VH-Valiant-Charger-Brochure",
+    "image": "1971_Chrysler_VH_Valiant_Charger-04-05.jpg",
+    "crop_box": (0.0, 0.22, 0.70, 0.98),
+    "output": ROOT / "assets" / "charger-hero.png",
+    "source_output": SOURCE_DIR / "charger-page-hero.jpg",
+    "size": (800, 450),
+}
+
 
 def brochure_url(folder: str, image: str, raw_image: bool = False) -> str:
     from urllib.parse import quote
@@ -253,6 +262,40 @@ def generate_hero() -> None:
     print(f"  saved {HERO['output']} ({styled.size[0]}×{styled.size[1]})")
 
 
+def stylize_landscape(img: Image.Image, size: tuple[int, int] = (800, 450)) -> Image.Image:
+    """Stylize a brochure crop, fitting the full car without clipping."""
+    max_w, max_h = size
+    ratio = min(max_w / img.width, max_h / img.height)
+    fitted = (int(img.width * ratio), int(img.height * ratio))
+    img = img.resize(fitted, Image.Resampling.LANCZOS)
+    img = img.filter(ImageFilter.MedianFilter(size=3))
+    img = ImageOps.autocontrast(img, cutoff=1)
+    img = ImageEnhance.Color(img).enhance(1.2)
+    img = ImageEnhance.Contrast(img).enhance(1.25)
+    img = ImageEnhance.Sharpness(img).enhance(1.1)
+    img = img.quantize(colors=12, method=Image.Quantize.MEDIANCUT).convert("RGB")
+    img = img.quantize(palette=build_brand_palette(), dither=Image.Dither.FLOYDSTEINBERG).convert("RGB")
+    tint = Image.new("RGB", fitted, (255, 106, 0))
+    return Image.blend(img, tint, alpha=0.04)
+
+
+def generate_charger_hero() -> None:
+    """Build charger.html hero from the VH Charger XL brochure."""
+    image_url = brochure_url(CHARGER_HERO["brochure"], CHARGER_HERO["image"])
+
+    print(f"Charger page ← {CHARGER_HERO['brochure']}")
+    download(image_url, CHARGER_HERO["source_output"])
+    time.sleep(0.75)
+
+    img = Image.open(CHARGER_HERO["source_output"]).convert("RGB")
+    prepared = prepare_source(img, CHARGER_HERO.get("crop_box"))
+    prepared.save(CHARGER_HERO["source_output"], "JPEG", quality=88, optimize=True)
+
+    styled = stylize_landscape(prepared, CHARGER_HERO["size"])
+    styled.save(CHARGER_HERO["output"], "PNG", optimize=True)
+    print(f"  saved {CHARGER_HERO['output']} ({styled.size[0]}×{styled.size[1]})")
+
+
 def prepare_source(img: Image.Image, crop_box: tuple[float, float, float, float] | None) -> Image.Image:
     if crop_box:
         img = apply_relative_crop(img, crop_box)
@@ -301,6 +344,7 @@ def main() -> None:
 
     ATTRIBUTIONS_FILE.write_text(json.dumps(attributions, indent=2), encoding="utf-8")
     generate_hero()
+    generate_charger_hero()
     print(f"\nDone — {len(attributions)} brochure illustrations saved.")
 
 

@@ -571,6 +571,19 @@ h3 { font-size: clamp(1.4rem, 3vw, 2rem); }
   align-items: center;
 }
 
+.charger-hero__media {
+  border: 3px solid var(--black);
+  background: var(--cream);
+  overflow: hidden;
+  box-shadow: 6px 6px 0 var(--black);
+}
+
+.charger-hero__img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .charger-spec {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
