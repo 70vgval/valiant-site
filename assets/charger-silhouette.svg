@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" fill="none" aria-hidden="true">
+  <!-- VH Charger silhouette -->
+  <path d="M30 220 L80 200 L140 185 L200 175 L280 168 L380 165 L480 168 L560 175 L620 182 L680 190 L740 200 L770 210 L780 220 L780 240 L30 240 Z" fill="#0A0A0A"/>
+  <path d="M100 185 L160 140 L220 115 L300 95 L400 88 L500 92 L580 105 L640 125 L700 155 L720 175 L680 185 L600 175 L500 168 L400 165 L300 168 L200 175 L120 185 Z" fill="#1a1a1a"/>
+  <path d="M160 140 L200 115 L280 100 L380 95 L480 98 L560 108 L620 125 L640 140 L600 148 L500 142 L400 138 L300 142 L200 148 L160 140 Z" fill="#0A0A0A" opacity="0.6"/>
+  <!-- Windows -->
+  <path d="M220 115 L300 100 L380 96 L460 100 L520 110 L560 125 L540 135 L460 128 L380 125 L300 128 L240 135 Z" fill="#F2C200" opacity="0.3"/>
+  <!-- Wheels -->
+  <circle cx="200" cy="240" r="38" fill="#0A0A0A" stroke="#333" stroke-width="3"/>
+  <circle cx="200" cy="240" r="20" fill="#222"/>
+  <circle cx="600" cy="240" r="38" fill="#0A0A0A" stroke="#333" stroke-width="3"/>
+  <circle cx="600" cy="240" r="20" fill="#222"/>
+  <!-- R/T stripe -->
+  <rect x="380" y="168" width="120" height="6" fill="#FF6A00"/>
+  <text x="400" y="90" font-family="Impact, sans-serif" font-size="28" fill="#FF6A00" opacity="0.8">CHARGER</text>
+</svg>

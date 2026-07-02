@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Valiant Australia</title>
+  <meta name="description" content="High-contrast retro gallery of iconic Chrysler Valiant models.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Valiant <span>Australia</span></a>
+      <button class="nav__toggle" aria-label="Toggle menu">Menu</button>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="timeline.html">Timeline</a></li>
+        <li><a href="charger.html">Charger</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="engines.html">Engines</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="production.html">Production</a></li>
+        <li><a href="stories.html">Stories</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <p class="page-header__label">Visual Archive</p>
+      <h1>Gallery</h1>
+      <p class="lead">Iconic Valiants in high-contrast retro layout. Click any image to view details.</p>
+    </div>
+  </header>
+
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="gallery-grid" id="gallery-grid"></div>
+    </div>
+  </section>
+
+  <hr class="separator separator--mustard">
+
+  <section class="section section--mustard">
+    <div class="container" style="text-align: center;">
+      <h2 style="color: var(--black);">Period Colour Palette</h2>
+      <p style="color: var(--black); margin-top: 1rem; max-width: 50ch; margin-inline: auto;">
+        Chrysler Australia's colour range was as bold as its advertising — Vitamin C, Hot Mustard,
+        True Blue, Poison Ivy Green, and classic blacks and creams.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
+        <div style="width: 80px; height: 80px; background: #FF6A00; border: 3px solid #0A0A0A;" title="Vitamin C"></div>
+        <div style="width: 80px; height: 80px; background: #F2C200; border: 3px solid #0A0A0A;" title="Hot Mustard"></div>
+        <div style="width: 80px; height: 80px; background: #1B4F8A; border: 3px solid #0A0A0A;" title="True Blue"></div>
+        <div style="width: 80px; height: 80px; background: #2D6B3A; border: 3px solid #0A0A0A;" title="Poison Ivy"></div>
+        <div style="width: 80px; height: 80px; background: #0A0A0A; border: 3px solid #F2C200;" title="Black"></div>
+        <div style="width: 80px; height: 80px; background: #F5F0E6; border: 3px solid #0A0A0A;" title="Cream"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <button class="lightbox__close">Close</button>
+    <div class="lightbox__content">
+      <div class="lightbox__visual gv-orange"></div>
+      <h2 class="lightbox__title"></h2>
+      <p class="lightbox__desc" style="color: var(--cream); margin-top: 0.5rem;"></p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__brand">Valiant Australia</div>
+      <div class="footer__tagline">Visual Archive</div>
+      <div class="footer__copy">Colour blocks represent period photography placeholders.</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>
