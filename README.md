@@ -25,13 +25,14 @@ A tribute website celebrating Chrysler Australia's legendary Valiant — from th
 
 ## Image pipeline
 
-Stylized timeline illustrations are generated from Wikimedia Commons photographs:
+Stylized timeline illustrations are generated from Chrysler Australia marketing brochures
+archived at [oldcarbrochures.org](https://www.oldcarbrochures.org/Australia/Chrysler/Chrysler/index.html):
 
 ```bash
 python3 scripts/fetch_and_stylize.py
 ```
 
-Source photos are saved to `assets/source/`, stylized PNGs to `assets/models/`, and licence metadata to `assets/attributions.json`.
+Brochure scans are saved to `assets/source/`, stylized PNGs to `assets/models/`, and source metadata to `assets/attributions.json`.
 
 ## Running Locally
 

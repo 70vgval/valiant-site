@@ -30,7 +30,7 @@
     <div class="container">
       <p class="page-header__label">1962 – 1981</p>
       <h1>Model Timeline</h1>
-      <p class="lead">Every Valiant series sold in Australia — click any model to expand details. Stylized illustrations derived from Wikimedia Commons photographs.</p>
+      <p class="lead">Every Valiant series sold in Australia — click any model to expand details. Stylized illustrations derived from period Chrysler Australia marketing brochures.</p>
     </div>
   </header>
 
@@ -57,13 +57,15 @@
       <h2>Image Credits</h2>
       <hr class="separator separator--short separator--black">
       <p style="margin-top: 1rem;">
-        Stylized 2D illustrations on this page are derived from photographs sourced via
-        <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener">Wikimedia Commons</a>.
+        Stylized 2D illustrations on this page are derived from Chrysler Australia marketing brochures
+        archived at
+        <a href="https://www.oldcarbrochures.org/Australia/Chrysler/Chrysler/index.html" target="_blank" rel="noopener">The Old Car Manual Project</a>.
       </p>
       <ul class="attributions__list" id="attributions-list"></ul>
       <p class="attributions__note">
-        Derivative stylized artwork created for this tribute site. Original photographs remain
-        under their respective Creative Commons licences.
+        Brochure scans presented for historical research and educational purposes.
+        See <a href="https://www.oldcarbrochures.org/" target="_blank" rel="noopener">oldcarbrochures.org</a>
+        for usage terms. Derivative stylized artwork created for this tribute site.
       </p>
     </div>
   </section>
@@ -113,8 +115,8 @@
         if (!list) return;
         list.innerHTML = items.map((a) =>
           `<li><strong>${a.id.toUpperCase()}</strong> — `
-          + `<a href="${a.source_url}" target="_blank" rel="noopener">${a.source_file}</a> `
-          + `by ${a.artist} (${a.license})</li>`
+          + `<a href="${a.source_url}" target="_blank" rel="noopener">${a.brochure}</a> `
+          + `(${a.source_file}; ${a.license})</li>`
         ).join('');
       })
       .catch(() => {});

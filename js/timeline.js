@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const imageHtml = model.imageId
         ? `<div class="timeline__media">
             <img src="assets/models/${model.imageId}.png"
-                 alt="${model.model} — stylized illustration"
+                 alt="${model.model} — stylized brochure illustration"
                  loading="lazy"
                  width="260" height="146">
           </div>`
