@@ -7,6 +7,7 @@ const VALIANT_MODELS = [
     model: 'RV1 – R Series',
     year: 1962,
     gen: 1,
+    imageId: 'rv1',
     detail: 'The first Australian-built Valiant, assembled at Tonsley Park from CKD kits. Featured the Slant-6 engine and established Chrysler\'s local manufacturing presence.',
     variants: ['Sedan'],
   },
@@ -16,6 +17,7 @@ const VALIANT_MODELS = [
     model: 'SV1 – S Series',
     year: 1962,
     gen: 1,
+    imageId: 'sv1',
     detail: 'Updated styling with a new grille and trim options. Sold alongside the R Series as Chrysler refined its Australian offering.',
     variants: ['Sedan'],
   },
@@ -25,6 +27,7 @@ const VALIANT_MODELS = [
     model: 'AP5',
     year: 1963,
     gen: 2,
+    imageId: 'ap5',
     detail: 'First fully Australian-designed Valiant body. Available as sedan and Safari wagon, marking a major step toward local identity.',
     variants: ['Sedan', 'Safari Wagon'],
   },
@@ -34,6 +37,7 @@ const VALIANT_MODELS = [
     model: 'AP6',
     year: 1965,
     gen: 2,
+    imageId: 'ap6',
     detail: 'Refined AP5 with improved trim and the introduction of the Wayfarer utility — a uniquely Australian body style.',
     variants: ['Sedan', 'Safari Wagon', 'Wayfarer Ute'],
   },
@@ -43,6 +47,7 @@ const VALIANT_MODELS = [
     model: 'VC',
     year: 1966,
     gen: 2,
+    imageId: 'vc',
     detail: 'Sharper styling with stacked headlights. The VC Valiant brought a more aggressive, modern look to the range.',
     variants: ['Sedan', 'Safari Wagon', 'Wayfarer Ute', 'Regal Safari'],
   },
@@ -52,6 +57,7 @@ const VALIANT_MODELS = [
     model: 'VE',
     year: 1967,
     gen: 3,
+    imageId: 've',
     detail: 'Wheels magazine Car of the Year. Wider body, improved handling, and the introduction of the VIP luxury trim line.',
     variants: ['Sedan', 'Safari Wagon', 'VIP'],
     highlight: 'Car of the Year',
@@ -62,6 +68,7 @@ const VALIANT_MODELS = [
     model: 'VF',
     year: 1969,
     gen: 3,
+    imageId: 'vf',
     detail: 'More luxury and performance options. The VF range expanded trim levels and introduced greater personalisation.',
     variants: ['Sedan', 'Safari Wagon', 'VIP', 'Regal'],
   },
@@ -71,6 +78,7 @@ const VALIANT_MODELS = [
     model: 'VG',
     year: 1970,
     gen: 3,
+    imageId: 'vg',
     detail: 'Historic introduction of the Australian-designed Hemi-6 engine — a straight-six that would become legendary.',
     variants: ['Sedan', 'Safari Wagon', 'Pacer', 'Regal'],
     highlight: 'Hemi-6 Debut',
@@ -81,6 +89,7 @@ const VALIANT_MODELS = [
     model: 'VH',
     year: 1971,
     gen: 4,
+    imageId: 'vh',
     detail: 'The generation that gave Australia the Charger. Bold fastback styling and the birth of "Hey Charger!" marketing.',
     variants: ['Sedan', 'Charger', 'Charger XL', 'Charger 770', 'R/T E38', 'R/T E49'],
     highlight: 'Hey Charger!',
@@ -91,6 +100,7 @@ const VALIANT_MODELS = [
     model: 'VJ',
     year: 1973,
     gen: 4,
+    imageId: 'vj',
     detail: 'Refined VH platform with the E55 340 V8 Charger — American muscle meets Australian engineering.',
     variants: ['Sedan', 'Charger', 'Charger 770', 'E55 340 V8'],
     highlight: 'E55 340 V8',
@@ -101,6 +111,7 @@ const VALIANT_MODELS = [
     model: 'VK',
     year: 1975,
     gen: 5,
+    imageId: 'vk',
     detail: 'Shift toward comfort and refinement. Updated styling with a focus on ride quality and interior appointments.',
     variants: ['Sedan', 'Charger', 'Regal'],
   },
@@ -110,6 +121,7 @@ const VALIANT_MODELS = [
     model: 'CL',
     year: 1976,
     gen: 5,
+    imageId: 'cl',
     detail: 'Introduced the Drifter panel van and ute. The Charger 770 continued as the performance flagship.',
     variants: ['Sedan', 'Charger 770', 'Drifter Van', 'Drifter Ute'],
   },
@@ -119,6 +131,7 @@ const VALIANT_MODELS = [
     model: 'CM',
     year: 1979,
     gen: 6,
+    imageId: 'cm',
     detail: 'The last Australian-built Valiant. Production ended in 1981, closing a remarkable chapter of local motoring.',
     variants: ['Sedan', 'Regal', 'Sigma-based variants'],
     highlight: 'Final Model',
@@ -129,6 +142,7 @@ const VALIANT_MODELS = [
     model: 'Chrysler by Chrysler',
     year: 1965,
     gen: 0,
+    imageId: 'chrysler-by-chrysler',
     detail: 'Long-wheelbase luxury sedans (CH, CJ, CK) built for the executive market. Australian prestige motoring at its finest.',
     variants: ['CH', 'CJ', 'CK'],
   },
@@ -158,14 +172,26 @@ document.addEventListener('DOMContentLoaded', () => {
         .map((v) => `<span class="badge badge--orange">${v}</span>`)
         .join('');
 
+      const imageHtml = model.imageId
+        ? `<div class="timeline__media">
+            <img src="assets/models/${model.imageId}.png"
+                 alt="${model.model} — stylized illustration"
+                 loading="lazy"
+                 width="260" height="146">
+          </div>`
+        : '';
+
       item.innerHTML = `
-        <div class="timeline__era">${model.era} · ${model.years}</div>
-        <div class="timeline__model">${model.model}</div>
-        ${highlight}
-        <div class="timeline__detail">
-          <p class="card__body">${model.detail}</p>
-          <div class="timeline__variants">${variants}</div>
+        <div class="timeline__body">
+          <div class="timeline__era">${model.era} · ${model.years}</div>
+          <div class="timeline__model">${model.model}</div>
+          ${highlight}
+          <div class="timeline__detail">
+            <p class="card__body">${model.detail}</p>
+            <div class="timeline__variants">${variants}</div>
+          </div>
         </div>
+        ${imageHtml}
       `;
 
       item.addEventListener('click', () => {

@@ -30,7 +30,7 @@
     <div class="container">
       <p class="page-header__label">1962 – 1981</p>
       <h1>Model Timeline</h1>
-      <p class="lead">Every Valiant series sold in Australia — click any model to expand details.</p>
+      <p class="lead">Every Valiant series sold in Australia — click any model to expand details. Stylized illustrations derived from Wikimedia Commons photographs.</p>
     </div>
   </header>
 
@@ -47,6 +47,24 @@
       </div>
 
       <div class="timeline" id="timeline-container"></div>
+    </div>
+  </section>
+
+  <hr class="separator">
+
+  <section class="section section--cream">
+    <div class="container attributions">
+      <h2>Image Credits</h2>
+      <hr class="separator separator--short separator--black">
+      <p style="margin-top: 1rem;">
+        Stylized 2D illustrations on this page are derived from photographs sourced via
+        <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener">Wikimedia Commons</a>.
+      </p>
+      <ul class="attributions__list" id="attributions-list"></ul>
+      <p class="attributions__note">
+        Derivative stylized artwork created for this tribute site. Original photographs remain
+        under their respective Creative Commons licences.
+      </p>
     </div>
   </section>
 
@@ -87,5 +105,19 @@
 
   <script src="js/main.js"></script>
   <script src="js/timeline.js"></script>
+  <script>
+    fetch('assets/attributions.json')
+      .then((r) => r.json())
+      .then((items) => {
+        const list = document.getElementById('attributions-list');
+        if (!list) return;
+        list.innerHTML = items.map((a) =>
+          `<li><strong>${a.id.toUpperCase()}</strong> — `
+          + `<a href="${a.source_url}" target="_blank" rel="noopener">${a.source_file}</a> `
+          + `by ${a.artist} (${a.license})</li>`
+        ).join('');
+      })
+      .catch(() => {});
+  </script>
 </body>
 </html>

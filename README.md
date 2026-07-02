@@ -23,6 +23,16 @@ A tribute website celebrating Chrysler Australia's legendary Valiant — from th
 - **Headings:** League Gothic, Anton
 - **Body:** Roboto
 
+## Image pipeline
+
+Stylized timeline illustrations are generated from Wikimedia Commons photographs:
+
+```bash
+python3 scripts/fetch_and_stylize.py
+```
+
+Source photos are saved to `assets/source/`, stylized PNGs to `assets/models/`, and licence metadata to `assets/attributions.json`.
+
 ## Running Locally
 
 No build step required — open `index.html` in a browser, or serve with any static file server:

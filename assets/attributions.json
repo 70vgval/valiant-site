@@ -1,0 +1,114 @@
+[
+  {
+    "id": "rv1",
+    "source_file": "Chrysler Valiant R Series (16972724246).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chrysler_Valiant_R_Series_(16972724246).jpg",
+    "license": "CC BY 2.0",
+    "artist": "Jeremy (Flickr)",
+    "stylized": "assets/models/rv1.png"
+  },
+  {
+    "id": "sv1",
+    "source_file": "Chrysler Valiant S-Series (16330566121).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chrysler_Valiant_S-Series_(16330566121).jpg",
+    "license": "CC BY 2.0",
+    "artist": "Jeremy (Flickr)",
+    "stylized": "assets/models/sv1.png"
+  },
+  {
+    "id": "ap5",
+    "source_file": "AP5 Valiant AP565.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:AP5_Valiant_AP565.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "OSX",
+    "stylized": "assets/models/ap5.png"
+  },
+  {
+    "id": "ap6",
+    "source_file": "1965 Valiant AP6 Standard==.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:1965_Valiant_AP6_Standard==.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Sicnag",
+    "stylized": "assets/models/ap6.png"
+  },
+  {
+    "id": "vc",
+    "source_file": "1966 Valiant VC Standard -.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:1966_Valiant_VC_Standard_-.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Sicnag",
+    "stylized": "assets/models/vc.png"
+  },
+  {
+    "id": "ve",
+    "source_file": "1968 Valiant VE Standard==.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:1968_Valiant_VE_Standard==.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Sicnag",
+    "stylized": "assets/models/ve.png"
+  },
+  {
+    "id": "vf",
+    "source_file": "1969-1970 Chrysler Valiant (VF) Pacer 225 sedan (2015-11-13) 01.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:1969-1970_Chrysler_Valiant_(VF)_Pacer_225_sedan_(2015-11-13)_01.jpg",
+    "license": "Public domain",
+    "artist": "OSX",
+    "stylized": "assets/models/vf.png"
+  },
+  {
+    "id": "vg",
+    "source_file": "1971 Chrysler VG Valiant sedan (6109313978) (cropped).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:1971_Chrysler_VG_Valiant_sedan_(6109313978)_(cropped).jpg",
+    "license": "CC BY 2.0",
+    "artist": "Jeremy (Flickr)",
+    "stylized": "assets/models/vg.png"
+  },
+  {
+    "id": "vh",
+    "source_file": "1972 Chrysler Valiant VH Charger XL.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:1972_Chrysler_Valiant_VH_Charger_XL.jpg",
+    "license": "CC BY 2.0",
+    "artist": "Sicnag (Flickr)",
+    "stylized": "assets/models/vh.png"
+  },
+  {
+    "id": "vj",
+    "source_file": "Chrysler Valiant VJ Charger (16950622926).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chrysler_Valiant_VJ_Charger_(16950622926).jpg",
+    "license": "CC BY 2.0",
+    "artist": "Jeremy (Flickr)",
+    "stylized": "assets/models/vj.png"
+  },
+  {
+    "id": "vk",
+    "source_file": "Chrysler VK Valiant Regal Sedan 03.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chrysler_VK_Valiant_Regal_Sedan_03.jpg",
+    "license": "Public domain",
+    "artist": "MartinHansV",
+    "stylized": "assets/models/vk.png"
+  },
+  {
+    "id": "cl",
+    "source_file": "Chrysler Valiant CL (16153035161).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chrysler_Valiant_CL_(16153035161).jpg",
+    "license": "CC BY 2.0",
+    "artist": "Jeremy (Flickr)",
+    "stylized": "assets/models/cl.png"
+  },
+  {
+    "id": "cm",
+    "source_file": "1980 Valiant CM Standard==.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:1980_Valiant_CM_Standard==.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Sicnag",
+    "stylized": "assets/models/cm.png"
+  },
+  {
+    "id": "chrysler-by-chrysler",
+    "source_file": "Chrysler_CH_Sedan_(white).JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chrysler_CH_Sedan_(white).JPG",
+    "license": "CC BY-SA 3.0",
+    "artist": "OSX",
+    "stylized": "assets/models/chrysler-by-chrysler.png"
+  }
+]
